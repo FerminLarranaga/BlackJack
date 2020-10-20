@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Challenges</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container-1">
+            <h2>Challenge 1: Your Age in Days</h2>
+            <div class="flex-box-container-1">
+
+                <div>
+                    <button class="btn btn-primary" onclick="ageInDays()">Click me</button>
+                </div>
+
+                <div>
+                    <button class="btn btn-danger" onclick="reset()">Reset</button>
+                </div>
+            </div>
+
+            <div class="flex-box-container-1">
+                <div id="flex-box-result"></div>
+            </div>
+
+        </div>
+
+        <div class="container-2">
+            <h2>Challenge 2: Cat Generatos</h2>
+
+            <button class="btn btn-success" id="cat-generator" onclick="generateCat()">Generate Cat</button>
+
+            <div class="flex-box-container-2" id="flex-cat-gen">
+
+            </div>
+        </div>
+
+        <div class="container-3">
+            <h2>Challenge 3: Rock, Paper, Scissors</h2>
+
+            <div class="flex-box-rps" id="flex-box-rps-div">
+                <img id="rock" src="http://images.clipartpanda.com/rock-clipart-clipart-harvestable-resources-rock.png" height="150" width="150" alt="" onclick="rpsGame(this)"/>
+                <img id="paper" src="http://images.clipartpanda.com/paper-clipart-nexxuz-Loose-Leaf-Paper.png" height="150" width="150" alt="" onclick="rpsGame(this)"/>
+                <img id="scissors" src="http://thumbs.dreamstime.com/b/female-hand-sing-victory-sign-peace-sign-scissors-vector-color-flat-illustration-isolated-white-background-web-83128345.jpg" height="150" width="150" alt="" onclick="rpsGame(this)"/>
+            </div>
+        </div>
+        <div class="container-4">
+            <h2 id="change-my-color">Challenge 4: Change the Color of All Buttons</h2> 
+            <div class="flex-box-pick-color">
+                <form action="">
+                    <select name="backdrop" id="background" onchange="buttonColorChange(value)">
+                        <option value="random">Random</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="reset">Reset</option>
+                    </select>
+                </form>
+                
+                <button class="btn btn-primary">Wee!</button>
+                <button class="btn btn-danger">Yahoo!</button>
+                <button class="btn btn-warning">Google!</button>
+                <button class="btn btn-success">Facebook!</button>
+            </div>
+        </div>
+        
+        <div class="container-5">
+            <h2>Challenge 5: Blackjack</h2>
+            <h2>Money: $<span id="money">1000</span></h2>
+            <h2>Dinero a apostar: $<span id="plataApostar">0</span></h2>
+            <table style="margin: auto;">
+                <tr>
+                    <td>
+                        <input value="" type="text" id="userMoney" class="input-money" placeholder="Minumum: 50">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" id="apostar" disabled="">Apostar</button>
+                    </td>
+                </tr>
+            </table>
+            <h1><span id="blackjack-result">Let's play</span></h1>
+            <div class="background">
+            <div class="flex-blackjack-row-1">
+                <div class="your-box">
+                    <h2>You: <span id="your-result">0</span></h2>
+                </div>
+                <button class="btn btn-danger btn-double" style="display: none" id="double-btn">Double</button>
+                <h2 class="alerta" id="alerta">Debes apostar como<br>minimo $50</h2>
+                <div class="dealer-box">
+                    <h2>Dealer: <span id="dealer-result">0</span></h2>
+                </div>
+            </div>
+            
+            <div class="flex-blackjack-row-2">
+                <div>
+                    <button class="btn-lg btn-primary mr-2" id="blackjack-hit">Hit</button>
+                    <button class="btn-lg btn-warning mr-2" id="blackjack-stand">Stand</button>
+                    <button class="btn-lg btn-danger" id="blackjack-deal">Deal</button>
+                </div>
+            </div>
+            </div>
+            <div class="flex-blackjack-row-3">
+                <table class="table-hover table-results">
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draw</th>
+                    </tr>
+                    <tr>
+                        <td><span id="wins">0</span></td>
+                        <td><span id="losses">0</span></td>
+                        <td><span id="draws">0</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <script src="functions.js"></script>
+    </body>
+</html>
